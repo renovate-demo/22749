@@ -1,103 +1,104 @@
-# gradle hunt
+# gradle hunt test
+
+https://github.com/renovatebot/renovate/pull/22749
 
 ```bash
-$ gradle build --no-build-cache --debug | grep https | grep okhttp
-
-2023-09-16T21:05:06.515+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom' started
-2023-09-16T21:05:06.560+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Download https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom'
-2023-09-16T21:05:06.562+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module' started
-2023-09-16T21:05:06.585+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Download https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module'
-2023-09-16T21:05:06.587+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom' started
-2023-09-16T21:05:06.595+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Download https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom'
-2023-09-16T21:05:06.598+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module' started
-2023-09-16T21:05:06.606+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Download https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module'
-2023-09-16T21:05:06.609+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml' started
-2023-09-16T21:05:07.036+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml'
-2023-09-16T21:05:07.037+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom' started
-2023-09-16T21:05:07.145+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom'
-2023-09-16T21:05:07.148+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module' started
-2023-09-16T21:05:07.256+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module'
-2023-09-16T21:05:07.260+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml' started
-2023-09-16T21:05:07.367+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml'
-2023-09-16T21:05:07.369+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom' started
-2023-09-16T21:05:07.476+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom'
-2023-09-16T21:05:07.480+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module' started
-2023-09-16T21:05:07.588+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module'
-2023-09-16T21:05:07.676+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar' started
-2023-09-16T21:05:08.341+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar'
-2023-09-16T21:05:06.515+0200 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.DefaultExternalResourceArtifactResolver] Loading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom
-2023-09-16T21:05:06.515+0200 [DEBUG] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Constructing external resource: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom
-2023-09-16T21:05:06.515+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResourceAccessor] Constructing external resource: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom
-2023-09-16T21:05:06.515+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpClientHelper] Performing HTTP GET: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom
-2023-09-16T21:05:06.559+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResponseResource] Attempting to download resource https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom.
-2023-09-16T21:05:06.560+0200 [INFO] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom to /root/.gradle/.tmp/gradle_download5690874501676938755bin
-2023-09-16T21:05:06.560+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom' completed
-2023-09-16T21:05:06.562+0200 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.DefaultExternalResourceArtifactResolver] Loading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module
-2023-09-16T21:05:06.562+0200 [DEBUG] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Constructing external resource: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module
-2023-09-16T21:05:06.562+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResourceAccessor] Constructing external resource: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module
-2023-09-16T21:05:06.562+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpClientHelper] Performing HTTP GET: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module
-2023-09-16T21:05:06.584+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResponseResource] Attempting to download resource https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module.
-2023-09-16T21:05:06.585+0200 [INFO] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module to /root/.gradle/.tmp/gradle_download9047489009289112300bin
-2023-09-16T21:05:06.585+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module' completed
-2023-09-16T21:05:06.587+0200 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.DefaultExternalResourceArtifactResolver] Loading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom
-2023-09-16T21:05:06.587+0200 [DEBUG] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Constructing external resource: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom
-2023-09-16T21:05:06.587+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResourceAccessor] Constructing external resource: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom
-2023-09-16T21:05:06.587+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpClientHelper] Performing HTTP GET: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom
-2023-09-16T21:05:06.595+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResponseResource] Attempting to download resource https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom.
-2023-09-16T21:05:06.595+0200 [INFO] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom to /root/.gradle/.tmp/gradle_download1789338528993177358bin
-2023-09-16T21:05:06.595+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom' completed
-2023-09-16T21:05:06.597+0200 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.DefaultExternalResourceArtifactResolver] Loading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module
-2023-09-16T21:05:06.597+0200 [DEBUG] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Constructing external resource: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module
-2023-09-16T21:05:06.598+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResourceAccessor] Constructing external resource: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module
-2023-09-16T21:05:06.598+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpClientHelper] Performing HTTP GET: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module
-2023-09-16T21:05:06.605+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResponseResource] Attempting to download resource https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module.
-2023-09-16T21:05:06.606+0200 [INFO] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Downloading https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module to /root/.gradle/.tmp/gradle_download10011670319461322805bin
-2023-09-16T21:05:06.606+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module' completed
-2023-09-16T21:05:06.608+0200 [DEBUG] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml
-2023-09-16T21:05:06.609+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml
-2023-09-16T21:05:06.609+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpClientHelper] Performing HTTP GET: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml
-2023-09-16T21:05:07.035+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResponseResource] Attempting to download resource https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml.
-2023-09-16T21:05:07.035+0200 [INFO] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Downloading https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml to /root/.gradle/.tmp/gradle_download13476083837767338222bin
-2023-09-16T21:05:07.036+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml' completed
-2023-09-16T21:05:07.037+0200 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.DefaultExternalResourceArtifactResolver] Loading https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom
-2023-09-16T21:05:07.037+0200 [DEBUG] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom
-2023-09-16T21:05:07.037+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom
-2023-09-16T21:05:07.037+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpClientHelper] Performing HTTP GET: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom
-2023-09-16T21:05:07.145+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResponseResource] Attempting to download resource https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom.
-2023-09-16T21:05:07.145+0200 [INFO] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Downloading https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom to /root/.gradle/.tmp/gradle_download10130028710795581091bin
-2023-09-16T21:05:07.145+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom' completed
-2023-09-16T21:05:07.147+0200 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.DefaultExternalResourceArtifactResolver] Loading https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module
-2023-09-16T21:05:07.147+0200 [DEBUG] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module
-2023-09-16T21:05:07.148+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module
-2023-09-16T21:05:07.148+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpClientHelper] Performing HTTP GET: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module
-2023-09-16T21:05:07.255+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResponseResource] Attempting to download resource https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module.
-2023-09-16T21:05:07.256+0200 [INFO] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Downloading https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module to /root/.gradle/.tmp/gradle_download18037567186601527540bin
-2023-09-16T21:05:07.256+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module' completed
-2023-09-16T21:05:07.260+0200 [DEBUG] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml
-2023-09-16T21:05:07.260+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml
-2023-09-16T21:05:07.260+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpClientHelper] Performing HTTP GET: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml
-2023-09-16T21:05:07.367+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResponseResource] Attempting to download resource https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml.
-2023-09-16T21:05:07.367+0200 [INFO] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Downloading https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml to /root/.gradle/.tmp/gradle_download4314292593035623407bin
-2023-09-16T21:05:07.367+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml' completed
-2023-09-16T21:05:07.368+0200 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.DefaultExternalResourceArtifactResolver] Loading https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom
-2023-09-16T21:05:07.368+0200 [DEBUG] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom
-2023-09-16T21:05:07.369+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom
-2023-09-16T21:05:07.369+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpClientHelper] Performing HTTP GET: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom
-2023-09-16T21:05:07.476+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResponseResource] Attempting to download resource https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom.
-2023-09-16T21:05:07.476+0200 [INFO] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Downloading https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom to /root/.gradle/.tmp/gradle_download103110557776834881bin
-2023-09-16T21:05:07.476+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom' completed
-2023-09-16T21:05:07.479+0200 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.DefaultExternalResourceArtifactResolver] Loading https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module
-2023-09-16T21:05:07.479+0200 [DEBUG] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module
-2023-09-16T21:05:07.480+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module
-2023-09-16T21:05:07.480+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpClientHelper] Performing HTTP GET: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module
-2023-09-16T21:05:07.587+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResponseResource] Attempting to download resource https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module.
-2023-09-16T21:05:07.588+0200 [INFO] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Downloading https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module to /root/.gradle/.tmp/gradle_download14212070588103585734bin
-2023-09-16T21:05:07.588+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module' completed
-2023-09-16T21:05:07.676+0200 [DEBUG] [org.gradle.api.internal.artifacts.repositories.resolver.DefaultExternalResourceArtifactResolver] Loading https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar
-2023-09-16T21:05:07.676+0200 [DEBUG] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar
-2023-09-16T21:05:07.677+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResourceAccessor] Constructing external resource: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar
-2023-09-16T21:05:07.677+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpClientHelper] Performing HTTP GET: https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar
-2023-09-16T21:05:07.889+0200 [DEBUG] [org.gradle.internal.resource.transport.http.HttpResponseResource] Attempting to download resource https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar.
-2023-09-16T21:05:07.889+0200 [INFO] [org.gradle.internal.resource.transfer.DefaultCacheAwareExternalResourceAccessor] Downloading https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar to /root/.gradle/.tmp/gradle_download13269816544899159688bin
-2023-09-16T21:05:08.341+0200 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Download https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar' completed
+$ gradle build --no-build-cache --debug | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | grep okhttp
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom.
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module.
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.6.0/okhttp-4.6.0.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom.
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.pom
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module.
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module
+https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/5.0.0-alpha.11/okhttp-5.0.0-alpha.11.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml.
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom.
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module.
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp/5.0.0-SNAPSHOT/okhttp-5.0.0-20211217.184251-6.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml.
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/maven-metadata.xml
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom.
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.pom
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module.
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.module
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar.
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar
+https://oss.sonatype.org/content/repositories/snapshots/com/squareup/okhttp3/okhttp-jvm/5.0.0-SNAPSHOT/okhttp-jvm-5.0.0-20211217.184251-3.jar
 ```
